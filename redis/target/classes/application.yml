@@ -1,0 +1,21 @@
+server:
+  port: 8099
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2021
+    username: root
+    password: yaojie
+  # Redis����
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 3000
+    lettuce:
+      pool:
+        max-active: 8 # ���ӳ����������
+        max-wait: -1ms  # ���ӳ���������ȴ�ʱ�䣨ʹ�ø�ֵ��ʾû�����ƣ�
+        min-idle: 0 # ���ӳ��е���С��������
+        max-idle: 8 # ���ӳ��е�����������
